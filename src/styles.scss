@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    background: rgb(34, 36, 41);
+}
+
+.mat-toolbar {
+    background: #24292e !important;
+}
+
+.mat-dialog-container {
+    overflow-y: hidden;
+    background: #34495e;
+    width: 370px;
+    height: 350px;
+    border: solid 2px lightgreen;
+}
