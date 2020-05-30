@@ -1,3 +1,14 @@
-<p>
-  login works!
-</p>
+<div>
+    <div id="content">
+        <mat-card>
+            <form [formGroup]="autForm" (ngSubmit)="onSubmit() ">
+                <mat-form-field>
+                    <input matInput autocomplete="off" formControlName="email" />
+                    <mat-placeholder class="placeholder">Email</mat-placeholder>
+                </mat-form-field>
+                <button mat-flat-button>ENTRAR</button>
+            </form>
+        </mat-card>
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+@import "../../../styles/vars";
+#content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(166, 94, 255, 1);
+    background: -moz-linear-gradient(top, rgba(166, 94, 255, 1) 0%, rgba(3, 214, 237, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(166, 94, 255, 1)), color-stop(100%, rgba(3, 214, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(166, 94, 255, 1) 0%, rgba(3, 214, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(166, 94, 255, 1) 0%, rgba(3, 214, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(166, 94, 255, 1) 0%, rgba(3, 214, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(166, 94, 255, 1) 0%, rgba(3, 214, 237, 1) 100%);
+}
+
+mat-card {
+    background: darkslateblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+::ng-deep .mat-form-field.mat-focused {
+    .mat-form-field-label {
+        color: #ff884d;
+    }
+    .mat-form-field-ripple {
+        background-color: #ff884d;
+    }
+    .mat-form-field-required-marker {
+        color: #ff884d;
+    }
+    .mat-input-element {
+        color: #ff884d;
+    }
+}
+
+button {
+    background: #ff6d48;
+    font-family: $osw;
+    color: floralwhite;
+}
