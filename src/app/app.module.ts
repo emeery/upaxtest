@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './core/auth/login/login.component';
 import { AppRoutingModule } from './routes/app.routing.module';
 import { HeaderComponent } from './core/layout/header/header.component';
+import { UserdetailComponent } from './components/userdetail/userdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,9 @@ import { HeaderComponent } from './core/layout/header/header.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

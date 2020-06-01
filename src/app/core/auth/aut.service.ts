@@ -17,6 +17,7 @@ export class AutService {
   constructor(
     private http: HttpClient, private router: Router
   ) { }
+  getIsAut() { return this.isAut; }
   onLogin(email: string, password:string) {
     const user: User = {email, password};
     this.http.post<{user: string, token: string}>(
@@ -29,7 +30,7 @@ export class AutService {
         this.isAut = true;
         this.autListen.next(true);
       }
-      // this.router.navigate(['/prod']);
+      this.router.navigate(['/']);
     }, e => {  });
   }
 }

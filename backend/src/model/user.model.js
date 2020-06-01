@@ -46,7 +46,6 @@ userSchema.statics.findCredential = async(email, password) => {
 // token generate
 userSchema.methods.generateToken = async function() {
   const user = this
-  console.log('usrr', user);
   const token = jwt.sign({
               email: user.email,
           },'la_llave')

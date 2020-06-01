@@ -17,7 +17,7 @@ router.post('/login', async(req, res) => {
           user,
           token,
       })
-  } catch (e) { console.log('e',e);
+  } catch (e) {
       res.status(401).json({ mensaje: 'verifica tus datos' })
   }
 })
