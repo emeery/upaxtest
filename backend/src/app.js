@@ -1,11 +1,12 @@
+const express = require('express')
+const bodyparser = require('body-parser')
+require('./config/db') // db
 
-var express = require('express');
-var app = express();
+const userRouter = require('./controller/user.controller')
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+var app = express()
+app.use(bodyparser.json())
 
-
+app.use('/user', userRouter)
 
 module.exports = app
