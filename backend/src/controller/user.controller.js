@@ -22,4 +22,19 @@ router.post('/login', async(req, res) => {
   }
 })
 
+// @route    GET user/all
+// @desc     Login user
+// @access   Public
+router.get('/all', async (req, res) =>{
+  try {
+      const users = await User.find({})
+      res.status(200).json({
+          msg: "todos los usuarios",
+          users,
+      })
+  } catch (e) {
+      res.status(500).send()
+  }
+});
+
 module.exports = router

@@ -17,6 +17,7 @@ export class AutService {
   constructor(
     private http: HttpClient, private router: Router
   ) { }
+  getToken() {return this.token; }
   getIsAut() { return this.isAut; }
   onLogin(email: string, password:string) {
     const user: User = {email, password};
