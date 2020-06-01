@@ -10,14 +10,17 @@ import { LoginComponent } from './core/auth/login/login.component';
 import { AppRoutingModule } from './routes/app.routing.module';
 import { HeaderComponent } from './core/layout/header/header.component';
 import { UserdetailComponent } from './components/userdetail/userdetail.component';
-import { AuthInterceptor } from './core/auth/aut.interceptor';
+import { AuthInterceptor } from './core/auth/middleware/aut.interceptor';
+import { ErrorComponent } from './core/auth/error/error.component';
+import { ErrorInterceptor } from './core/auth/middleware/error.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    UserdetailComponent
+    UserdetailComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { AuthInterceptor } from './core/auth/aut.interceptor';
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
   ],
+  entryComponents: [ErrorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

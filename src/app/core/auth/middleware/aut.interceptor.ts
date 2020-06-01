@@ -5,7 +5,7 @@ import {
   HttpEvent,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AutService } from './aut.service';
+import { AutService } from '../aut.service';
 import { Observable } from 'rxjs';
 // manipula la solicitud y agrega el token en el header authorization
 @Injectable()

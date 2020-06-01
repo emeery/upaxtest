@@ -31,7 +31,7 @@ export class AutService {
         this.isAut = true;
         this.autListen.next(true);
       }
-      this.router.navigate(['/']);
+      this.router.navigate(['/detail']);
     }, e => {  });
   }
 }
