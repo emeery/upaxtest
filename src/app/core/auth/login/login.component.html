@@ -3,8 +3,12 @@
         <mat-card>
             <form [formGroup]="autForm" (ngSubmit)="onSubmit() ">
                 <mat-form-field>
-                    <input matInput autocomplete="off" formControlName="email" />
+                    <input matInput autocomplete="off" formControlName="email" required #email/>
                     <mat-placeholder class="placeholder">Email</mat-placeholder>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" formControlName="password" required />
+                    <mat-placeholder class="placeholder">Password</mat-placeholder>
                 </mat-form-field>
                 <button mat-flat-button>ENTRAR</button>
             </form>
